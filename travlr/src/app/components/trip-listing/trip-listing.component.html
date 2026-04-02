@@ -1,0 +1,30 @@
+<!-- trip-listing.component.html --> 
+<div class="listing-container"> 
+ 
+  <div class="listing-header"> 
+    <div> 
+      <h1>Trip Management</h1> 
+      <p *ngIf="!loading">{{ trips.length }} trips available</p> 
+    </div> 
+    <a routerLink="/add-trip" class="btn btn-primary">+ Add New Trip</a> 
+  </div> 
+ 
+  <div *ngIf="loading" class="loading"> 
+    <p>Loading trips...</p> 
+  </div> 
+ 
+  <div *ngIf="error" class="error-banner"> 
+    <p>⚠️ {{ error }}</p> 
+    <button (click)="loadTrips()">Retry</button> 
+  </div> 
+ 
+  <div *ngIf="!loading && !error" class="trips-grid"> 
+    <app-trip-card *ngFor="let trip of trips" [trip]="trip" (deleteTrip)="onDeleteTrip($event)"></app-trip-card> 
+  </div> 
+ 
+  <div *ngIf="!loading && trips.length === 0" class="empty-state"> 
+    <p>No trips found. Add your first trip to get started.</p> 
+    <a routerLink="/add-trip" class="btn btn-primary">+ Add Trip</a> 
+  </div> 
+ 
+</div> 

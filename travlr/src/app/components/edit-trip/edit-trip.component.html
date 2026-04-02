@@ -1,0 +1,66 @@
+<!-- edit-trip.component.html --> 
+<div class="form-container"> 
+ 
+  <div *ngIf="loading" class="loading">Loading trip...</div> 
+ 
+  <div *ngIf="!loading"> 
+    <div class="form-header"> 
+      <h1>Edit Trip</h1> 
+      <p>Editing: <strong>{{ trip.code }} — {{ trip.name }}</strong></p> 
+    </div> 
+ 
+    <div *ngIf="error" class="error-banner">⚠️ {{ error }}</div> 
+ 
+    <form (ngSubmit)="onSubmit()" #editForm="ngForm" class="trip-form"> 
+ 
+      <div class="form-row"> 
+        <div class="form-group"> 
+          <label>Trip Code</label> 
+          <input type="text" [value]="trip.code" disabled class="form-control form-control-disabled"> 
+        </div> 
+        <div class="form-group"> 
+          <label for="name">Trip Name *</label> 
+          <input id="name" name="name" type="text" [(ngModel)]="trip.name" required class="form-control"> 
+        </div> 
+      </div> 
+ 
+      <div class="form-row"> 
+        <div class="form-group"> 
+          <label for="length">Duration *</label> 
+          <input id="length" name="length" type="text" [(ngModel)]="trip.length" required class="form-control"> 
+        </div> 
+        <div class="form-group"> 
+          <label for="start">Start Date *</label> 
+          <input id="start" name="start" type="date" [(ngModel)]="trip.start" required class="form-control"> 
+        </div> 
+      </div> 
+ 
+      <div class="form-row"> 
+        <div class="form-group"> 
+          <label for="resort">Resort *</label> 
+          <input id="resort" name="resort" type="text" [(ngModel)]="trip.resort" required class="form-control"> 
+        </div> 
+        <div class="form-group"> 
+          <label for="perPerson">Price Per Person ($) *</label> 
+          <input id="perPerson" name="perPerson" type="number" [(ngModel)]="trip.perPerson" required min="0" class="form-control"> 
+        </div> 
+      </div> 
+ 
+      <div class="form-group"> 
+        <label for="image">Image Filename *</label> 
+        <input id="image" name="image" type="text" [(ngModel)]="trip.image" required class="form-control"> 
+      </div> 
+ 
+      <div class="form-group"> 
+        <label for="description">Description *</label> 
+        <textarea id="description" name="description" [(ngModel)]="trip.description" required rows="4" class="form-control"></textarea> 
+      </div> 
+ 
+      <div class="form-actions"> 
+        <button type="button" class="btn btn-cancel" (click)="onCancel()">Cancel</button> 
+        <button type="submit" class="btn btn-submit" [disabled]="editForm.invalid || submitting">{{ submitting ? 'Saving...' : 'Save Changes' }}</button> 
+      </div> 
+ 
+    </form> 
+  </div> 
+</div> 

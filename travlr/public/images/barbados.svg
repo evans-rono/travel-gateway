@@ -1,0 +1,17 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="sky2" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" style="stop-color:#87CEEB;stop-opacity:1" />
+        <stop offset="100%" style="stop-color:#FFB6C1;stop-opacity:1" />
+      </linearGradient>
+    </defs>
+    <rect width="800" height="600" fill="url(#sky2)"/>
+    <line x1="150" y1="400" x2="150" y2="250" stroke="#8B4513" stroke-width="8"/>
+    <circle cx="150" cy="220" r="50" fill="#228B22"/>
+    <line x1="650" y1="420" x2="650" y2="280" stroke="#8B4513" stroke-width="8"/>
+    <circle cx="650" cy="250" r="50" fill="#228B22"/>
+    <rect y="450" width="800" height="150" fill="#D2B48C"/>
+    <rect y="500" width="800" height="100" fill="#20B2AA"/>
+    <text x="400" y="250" font-size="60" text-anchor="middle" fill="white" font-weight="bold" font-family="Arial">BARBADOS</text>
+    <text x="400" y="370" font-size="32" text-anchor="middle" fill="white" font-family="Arial">Tropical Paradise</text>
+  </svg>

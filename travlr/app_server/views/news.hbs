@@ -1,0 +1,28 @@
+<!-- Page Header -->
+<div class="page-header">
+  <h1>Travel News & Tips</h1>
+  <p>Stay updated with the latest travel trends and destination guides</p>
+</div>
+
+<!-- Content -->
+<div class="content-container">
+  {{#if news}}
+    <div class="cards-grid">
+      {{#each news}}
+      <div class="card">
+        <div class="card-content">
+          <span class="card-badge" style="background: var(--accent);">{{date}}</span>
+          <h3 class="card-title">{{title}}</h3>
+          <p style="color: var(--text-secondary); line-height: 1.6; margin: 14px 0;">{{summary}}</p>
+          <a href="#" style="color: var(--primary); font-weight: 600; display: inline-block; margin-top: 10px;">Read More →</a>
+        </div>
+      </div>
+      {{/each}}
+    </div>
+  {{else}}
+    <div class="empty-state">
+      <p>📰 No news articles available at the moment.</p>
+      <a href="/" class="btn" style="display: inline-block; padding: 10px 24px; background: var(--primary); color: white; border-radius: 8px;">Return Home</a>
+    </div>
+  {{/if}}
+</div>

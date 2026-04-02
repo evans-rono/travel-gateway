@@ -1,0 +1,43 @@
+<div class="detail-container">
+  <a href="/travel" class="back-link">← Back to Packages</a>
+
+  <div class="booking-card">
+    <h1>✈️ Complete Your Booking</h1>
+
+    <div class="booking-summary">
+      <h2>{{trip.name}}</h2>
+      <div class="booking-summary-grid">
+        <p><strong>🏨 Resort:</strong><br>{{trip.resort}}</p>
+        <p><strong>📅 Start:</strong><br>{{trip.start}}</p>
+        <p><strong>🌙 Duration:</strong><br>{{trip.length}} nights</p>
+        <p><strong>💰 Price:</strong><br><span style="color: var(--accent); font-weight: 700; font-size: 1.1rem;">${{trip.perPerson}} per person</span></p>
+      </div>
+    </div>
+
+    <form class="booking-form" method="POST" action="/api/reservations">
+      <input type="hidden" name="tripCode" value="{{trip.code}}">
+
+      <div class="form-group">
+        <label class="form-label">Full Name</label>
+        <input type="text" name="fullName" class="form-input" placeholder="Your full name" required>
+      </div>
+      
+      <div class="form-group">
+        <label class="form-label">Email Address</label>
+        <input type="email" name="email" class="form-input" placeholder="your@email.com" required>
+      </div>
+      
+      <div class="form-group">
+        <label class="form-label">Phone Number</label>
+        <input type="tel" name="phone" class="form-input" placeholder="Your phone number" required>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Number of Guests</label>
+        <input type="number" name="guests" class="form-input" value="1" min="1" max="10" required>
+      </div>
+
+      <button type="submit" class="detail-button">✓ Confirm Booking</button>
+    </form>
+  </div>
+</div>

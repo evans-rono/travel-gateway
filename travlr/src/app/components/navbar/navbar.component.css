@@ -1,0 +1,6 @@
+.admin-nav { display: flex; justify-content: space-between; align-items: center; background: #2c3e50; padding: 16px 32px; } 
+.nav-brand a { color: white; font-size: 1.3rem; font-weight: bold; text-decoration: none; } 
+.nav-links { list-style: none; display: flex; gap: 24px; } 
+.nav-links a { color: #ccc; text-decoration: none; } 
+.nav-links a:hover { color: white; } 
+.btn-add { background: #27ae60; color: white !important; padding: 8px 18px; border-radius: 4px; } 

@@ -1,0 +1,62 @@
+<!-- add-trip.component.html --> 
+<div class="form-container"> 
+ 
+  <div class="form-header"> 
+    <h1>Add New Trip</h1> 
+    <p>Fill in the details below to add a new travel package</p> 
+  </div> 
+ 
+  <div *ngIf="error" class="error-banner">⚠️ {{ error }}</div> 
+ 
+  <form (ngSubmit)="onSubmit()" #tripForm="ngForm" class="trip-form"> 
+ 
+    <div class="form-row"> 
+      <div class="form-group"> 
+        <label for="code">Trip Code *</label> 
+        <input id="code" name="code" type="text" [(ngModel)]="trip.code" required placeholder="e.g. B0101" class="form-control"> 
+      </div> 
+      <div class="form-group"> 
+        <label for="name">Trip Name *</label> 
+        <input id="name" name="name" type="text" [(ngModel)]="trip.name" required placeholder="e.g. Cancun Beach Getaway" class="form-control"> 
+      </div> 
+    </div> 
+ 
+    <div class="form-row"> 
+      <div class="form-group"> 
+        <label for="length">Duration *</label> 
+        <input id="length" name="length" type="text" [(ngModel)]="trip.length" required placeholder="e.g. 4 nights / 5 days" class="form-control"> 
+      </div> 
+      <div class="form-group"> 
+        <label for="start">Start Date *</label> 
+        <input id="start" name="start" type="date" [(ngModel)]="trip.start" required class="form-control"> 
+      </div> 
+    </div> 
+ 
+    <div class="form-row"> 
+      <div class="form-group"> 
+        <label for="resort">Resort *</label> 
+        <input id="resort" name="resort" type="text" [(ngModel)]="trip.resort" required placeholder="e.g. Emerald Bay Resort" class="form-control"> 
+      </div> 
+      <div class="form-group"> 
+        <label for="perPerson">Price Per Person ($) *</label> 
+        <input id="perPerson" name="perPerson" type="number" [(ngModel)]="trip.perPerson" required min="0" placeholder="799" class="form-control"> 
+      </div> 
+    </div> 
+ 
+    <div class="form-group"> 
+      <label for="image">Image Filename *</label> 
+      <input id="image" name="image" type="text" [(ngModel)]="trip.image" required placeholder="e.g. cancun.jpg" class="form-control"> 
+    </div> 
+ 
+    <div class="form-group"> 
+      <label for="description">Description *</label> 
+      <textarea id="description" name="description" [(ngModel)]="trip.description" required rows="4" placeholder="Describe the trip experience..." class="form-control"></textarea> 
+    </div> 
+ 
+    <div class="form-actions"> 
+      <button type="button" class="btn btn-cancel" (click)="onCancel()">Cancel</button> 
+      <button type="submit" class="btn btn-submit" [disabled]="tripForm.invalid || submitting">{{ submitting ? 'Saving...' : 'Add Trip' }}</button> 
+    </div> 
+ 
+  </form> 
+</div> 

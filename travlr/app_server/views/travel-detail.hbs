@@ -1,0 +1,43 @@
+<div class="detail-container">
+  <a href="/travel" class="back-link">← Back to Packages</a>
+
+  <div class="detail-card">
+    <div class="detail-image">
+      {{#if trip.image}}
+        <img src="/images/{{trip.image}}.svg" alt="{{trip.name}}" loading="lazy">
+      {{else}}
+        <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 4rem;">✈️</div>
+      {{/if}}
+    </div>
+
+    <div class="detail-body">
+      <span class="card-badge" style="display: inline-block; margin-bottom: 15px;">{{trip.code}}</span>
+      <h1>{{trip.name}}</h1>
+
+      <div class="detail-meta">
+        <div>
+          <strong>📅 Start Date</strong><br>
+          <span>{{trip.start}}</span>
+        </div>
+        <div>
+          <strong>🌙 Duration</strong><br>
+          <span>{{trip.length}} nights</span>
+        </div>
+        <div>
+          <strong>🏨 Resort</strong><br>
+          <span>{{trip.resort}}</span>
+        </div>
+        <div>
+          <strong>💰 Price</strong><br>
+          <span style="color: var(--accent); font-weight: 700; font-size: 1.2rem;">${{trip.perPerson}}</span>
+        </div>
+      </div>
+
+      <p class="detail-description">{{trip.description}}</p>
+
+      <a href="/reservations/{{trip.code}}" class="detail-button">
+        ✈️ Book This Trip Now
+      </a>
+    </div>
+  </div>
+</div>

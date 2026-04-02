@@ -1,0 +1,26 @@
+<!-- trip-card.component.html --> 
+<div class="trip-card"> 
+ 
+  <div class="trip-card-header"> 
+    <span class="trip-code">{{ trip.code }}</span> 
+    <span class="trip-price">${{ trip.perPerson | number:'1.2-2' }}</span> 
+  </div> 
+ 
+  <div class="trip-card-body"> 
+    <h3>{{ trip.name }}</h3> 
+ 
+    <div class="trip-meta"> 
+      <p>📅 {{ trip.start | date: 'MMM d, yyyy' }}</p> 
+      <p>🌙 {{ trip.length }}</p> 
+      <p>🏨 {{ trip.resort }}</p> 
+    </div> 
+ 
+    <p class="trip-description">{{ trip.description }}</p> 
+  </div> 
+ 
+  <div class="trip-card-actions"> 
+    <button class="btn btn-edit" (click)="editTrip()">✏️ Edit</button> 
+    <button class="btn btn-delete" (click)="onDelete()">🗑️ Delete</button> 
+  </div> 
+ 
+</div> 

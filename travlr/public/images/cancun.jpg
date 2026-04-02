@@ -1,0 +1,20 @@
+
+      <svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="sky" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color:#87CEEB;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#E0F6FF;stop-opacity:1" />
+          </linearGradient>
+          <linearGradient id="water" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color:#00BFFF;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#1E90FF;stop-opacity:1" />
+          </linearGradient>
+        </defs>
+        <rect width="800" height="300" fill="url(#sky)"/>
+        <circle cx="700" cy="80" r="60" fill="#FFD700" opacity="0.8"/>
+        <rect y="300" width="800" height="300" fill="url(#water)"/>
+        <rect y="350" width="800" height="250" fill="#F4A460"/>
+        <text x="400" y="250" font-size="60" text-anchor="middle" fill="white" font-weight="bold">🏖️ Cancun</text>
+        <text x="400" y="320" font-size="32" text-anchor="middle" fill="white" opacity="0.9">Paradise Beach</text>
+      </svg>
+    

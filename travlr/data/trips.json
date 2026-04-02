@@ -1,0 +1,52 @@
+[
+  {
+    "code": "B0101",
+    "name": "Cancun Beach Getaway",
+    "length": "4 nights / 5 days",
+    "start": "2021-02-14",
+    "resort": "Emerald Bay Resort",
+    "perPerson": 799.00,
+    "image": "cancun.jpg",
+    "description": "Enjoy the crystal-clear waters and white sandy beaches of Cancun. This package includes beachfront accommodation, daily breakfast, and guided snorkeling tours."
+  },
+  {
+    "code": "B0103",
+    "name": "Barbados Paradise",
+    "length": "5 nights / 6 days",
+    "start": "2021-02-28",
+    "resort": "Castaway Cove Resort",
+    "perPerson": 1299.00,
+    "image": "barbados.jpg",
+    "description": "Experience the charm of Barbados with its stunning coral reefs, rum distilleries, and vibrant culture. All-inclusive dining and water sports included."
+  },
+  {
+    "code": "B0401",
+    "name": "Panama City Surf Trip",
+    "length": "4 nights / 5 days",
+    "start": "2021-03-21",
+    "resort": "Sunseeker Surf Resort",
+    "perPerson": 1199.00,
+    "image": "panama.jpg",
+    "description": "Ride the waves at Panama City Beach. Includes surf lessons, equipment rental, and beachside accommodation."
+  },
+  {
+    "code": "B0701",
+    "name": "Tahiti Island Escape",
+    "length": "6 nights / 7 days",
+    "start": "2021-03-28",
+    "resort": "Hedonist Heaven Resort",
+    "perPerson": 1799.00,
+    "image": "tahiti.jpg",
+    "description": "Escape to the paradise islands of Tahiti. Overwater bungalows, lagoon excursions, and world-class dining await."
+  },
+  {
+    "code": "B0901",
+    "name": "French Riviera Luxury",
+    "length": "5 nights / 6 days",
+    "start": "2021-04-11",
+    "resort": "Chateau Royal",
+    "perPerson": 2499.00,
+    "image": "riviera.jpg",
+    "description": "Discover the glamour of the French Riviera. From the beaches of Nice to the casinos of Monaco."
+  }
+]

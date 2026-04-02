@@ -1,0 +1,28 @@
+﻿<!-- partials/trip-card.hbs -->
+<div class="trip-card">
+
+  <div class="trip-card-image">
+    <img src="/images/{{image}}" alt="{{name}}"
+         onerror="this.src='/images/placeholder.jpg'; this.onerror=null;">
+    <span class="trip-price">${{perPerson}}</span>
+  </div>
+
+  <div class="trip-card-body">
+    <div class="trip-code">{{code}}</div>
+    <h3 class="trip-name">{{name}}</h3>
+
+    <div class="trip-details">
+      <span>📅 {{start}}</span>
+      <span>🌙 {{length}}</span>
+      <span>🏨 {{resort}}</span>
+    </div>
+
+    <p class="trip-description">{{description}}</p>
+
+    <div class="trip-actions">
+      <a href="/travel/{{code}}" class="btn btn-primary">View Details</a>
+      <a href="/reservations/{{code}}" class="btn btn-secondary">Book Now</a>
+    </div>
+  </div>
+
+</div>
